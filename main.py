@@ -15,6 +15,10 @@ class KivySudokuApp(App):
     def build(self):
         return Sudoku()
 
+    def close_application(self): 
+        App.get_running_app().stop() 
+        Window.close()
+
 
 class MenuWidget(RelativeLayout):
     pass   
