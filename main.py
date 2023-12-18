@@ -116,13 +116,13 @@ class Sudoku(BoxLayout):
         
         self.timer = Label(font_size = self.height * 0.2,
                            font_name = "label_font.ttf",
-                           color = (0, 0.25, 0.3, 1),
+                           color = (0, 0.75, 0.3, 1),
                            bold = True,
                            size_hint = (1, 0.05))
         
         self.number = Label(font_size = self.height * 0.2,
                            font_name = "label_font.ttf",
-                           color = (0, 0.25, 0.3, 1),
+                           color = (0, 0.75, 0.3, 1),
                            bold = True,
                            size_hint = (1, 0.05))
         
