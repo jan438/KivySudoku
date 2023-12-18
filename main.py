@@ -107,7 +107,7 @@ class Sudoku(BoxLayout):
         
         self.orientation = 'vertical'
         
-        self.title = Label(text = "KivySudoku",
+        self.quitbtn = Button(text = "Quit",
                            font_size = self.height * 0.5,
                            font_name = "label_font.ttf",
                            color = (0, 0.25, 0.3, 1),
@@ -300,7 +300,7 @@ class Sudoku(BoxLayout):
         self.over = True
         
         self.remove_widget(self.grid)
-        self.remove_widget(self.title)
+        self.remove_widget(self.quitbtn)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
@@ -367,7 +367,7 @@ class Sudoku(BoxLayout):
         
         self.remove_widget(self.menu)
         
-        self.add_widget(self.title)
+        self.add_widget(self.quitbtn)
         self.add_widget(self.timer)
         self.add_widget(self.number)
         self.add_widget(self.grid) 
