@@ -24,7 +24,7 @@ class MenuWidget(RelativeLayout):
     pass   
 
 
-class MenuWidget2(RelativeLayout):
+class MenuWidget3(RelativeLayout):
     pass   
 
 
@@ -304,13 +304,13 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
-        self.menu2 = MenuWidget2()
+        self.menu3 = MenuWidget3()
         
-        self.add_widget(self.menu2)
+        self.add_widget(self.menu3)
         
     
     def new_game(self):
-        self.remove_widget(self.menu2)        
+        self.remove_widget(self.menu3)        
         self.add_widget(Sudoku())
         
         
