@@ -138,9 +138,12 @@ class Sudoku(BoxLayout):
         
         Clock.schedule_interval(self.update, 1/4)
 
-    def callback(self, event):
-        App.get_running_app().stop() 
-        Window.close()
+    def callback(self, event):       
+        self.remove_widget(self.grid)
+        self.remove_widget(self.quitbtn)
+        self.remove_widget(self.timer)
+        self.remove_widget(self.number)
+        self.add_widget(Sudoku())
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
         for i in range(1, 10):
