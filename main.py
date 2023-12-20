@@ -113,7 +113,8 @@ class Sudoku(BoxLayout):
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
                            size_hint = (1, 0.1))
-        
+        self.quitbtn.bind(on_press = self.callback)
+
         self.timer = Label(font_size = self.height * 0.2,
                            font_name = "label_font.ttf",
                            color = (0, 0.75, 0.3, 1),
@@ -137,6 +138,9 @@ class Sudoku(BoxLayout):
         
         Clock.schedule_interval(self.update, 1/4)
 
+    def callback(self, event):
+        App.get_running_app().stop() 
+        Window.close()
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
         for i in range(1, 10):
