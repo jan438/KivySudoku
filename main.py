@@ -113,7 +113,7 @@ class Sudoku(BoxLayout):
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
                            size_hint = (0.5, 0.1))
-        self.quitbtn.bind(on_press = self.callback)
+        self.quitbtn.bind(on_press = self.quitback)
         
         self.clearbtn = Button(text = "Clear",
                            font_size = self.height * 0.5,
@@ -121,6 +121,7 @@ class Sudoku(BoxLayout):
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
                            size_hint = (0.5, 0.1))
+        self.clearbtn.bind(on_press = self.clearback)
 
         self.timer = Label(font_size = self.height * 0.2,
                            font_name = "label_font.ttf",
@@ -145,13 +146,18 @@ class Sudoku(BoxLayout):
         
         Clock.schedule_interval(self.update, 1/4)
 
-    def callback(self, event):       
+    def quitback(self, event):       
         self.remove_widget(self.grid)
         self.remove_widget(self.quitbtn)
         self.remove_widget(self.clearbtn)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         self.add_widget(Sudoku())
+        
+        
+    def clearback(self, event):
+        print('clear')
+        
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
         for i in range(1, 10):
