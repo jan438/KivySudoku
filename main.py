@@ -107,6 +107,8 @@ class Sudoku(BoxLayout):
         
         self.orientation = 'vertical'
         
+        self.layout = BoxLayout(orientation ='horizontal')
+        
         self.quitbtn = Button(text = "Quit",
                            font_size = self.height * 0.5,
                            font_name = "label_font.ttf",
@@ -122,6 +124,10 @@ class Sudoku(BoxLayout):
                            bold = True,
                            size_hint = (0.5, 0.1))
         self.clearbtn.bind(on_press = self.clearback)
+        
+        
+        self.layout.add_widget(self.quitbtn)
+        self.layout.add_widget(self.clearbtn)
 
         self.timer = Label(font_size = self.height * 0.2,
                            font_name = "label_font.ttf",
@@ -148,8 +154,7 @@ class Sudoku(BoxLayout):
 
     def quitback(self, event):       
         self.remove_widget(self.grid)
-        self.remove_widget(self.quitbtn)
-        self.remove_widget(self.clearbtn)
+        self.remove_widget(self.layout)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         self.add_widget(Sudoku())
@@ -321,8 +326,7 @@ class Sudoku(BoxLayout):
         self.over = True
         
         self.remove_widget(self.grid)
-        self.remove_widget(self.quitbtn)
-        self.remove_widget(self.clearbtn)
+        self.remove_widget(self.layout)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
@@ -389,8 +393,7 @@ class Sudoku(BoxLayout):
         
         self.remove_widget(self.menu)
         
-        self.add_widget(self.quitbtn)
-        self.add_widget(self.clearbtn)
+        self.add_widget(self.layout)
         self.add_widget(self.timer)
         self.add_widget(self.number)
         self.add_widget(self.grid) 
