@@ -107,7 +107,7 @@ class Sudoku(BoxLayout):
         
         self.orientation = 'vertical'
         
-        self.layout = BoxLayout(orientation="horizontal", size_hint=(1, 0.2), pos_hint = {'x':.2, 'y':.2})
+        self.layout = BoxLayout(orientation="horizontal", size_hint=(1, 0.2), pos_hint = {'x':0, 'y':0})
         
         self.quitbtn = Button(text = "Quit",
                            font_size = self.height * 0.5,
