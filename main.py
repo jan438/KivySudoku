@@ -163,7 +163,7 @@ class Sudoku(BoxLayout):
     def clearback(self, event):
         for i in range(9):
             for j in range(9):
-                print('Pos ',i,j,self.grid.grids[i].buttons[j].background_color )
+                print('Pos ',i,j,self.grid.grids[i].buttons[j].background_color,self.grid.grids[i].buttons[j].text)
                
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
