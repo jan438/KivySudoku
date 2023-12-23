@@ -161,8 +161,10 @@ class Sudoku(BoxLayout):
         
         
     def clearback(self, event):
-        print('clear')
-        
+        for i in range(9):
+            for j in range(9):
+                print('Pos ',i,j,self.player_board[i][j])
+               
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
         for i in range(1, 10):
