@@ -164,9 +164,9 @@ class Sudoku(BoxLayout):
     def clearback(self, event):
         for i in range(9):
             for j in range(9):
-                print('Pos ',i,j,get_hex_from_color(self.grid.grids[i].buttons[j].background_color),self.grid.grids[i].buttons[j].text)
-                if self.grid.grids[i].buttons[j].background_color == (0.2, 0.2, 0.2):
+                if get_hex_from_color(self.grid.grids[i].buttons[j].background_color) == "#333333ff":
                     self.grid.grids[i].buttons[j].text = ''
+
 
     def on_key_down(self, keyboard, keycode, text, modifiers):
         for i in range(1, 10):
