@@ -6,6 +6,7 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.core.window import Window
 from kivy.clock import Clock
+from kivy.utils import get_hex_from_color
 
 import random
 import copy
@@ -163,7 +164,7 @@ class Sudoku(BoxLayout):
     def clearback(self, event):
         for i in range(9):
             for j in range(9):
-                print('Pos ',i,j,self.grid.grids[i].buttons[j].background_color,self.grid.grids[i].buttons[j].text)
+                print('Pos ',i,j,get_hex_from_color(self.grid.grids[i].buttons[j].background_color),self.grid.grids[i].buttons[j].text)
                 if self.grid.grids[i].buttons[j].background_color == (0.2, 0.2, 0.2):
                     self.grid.grids[i].buttons[j].text = ''
 
