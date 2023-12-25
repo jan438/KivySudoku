@@ -115,7 +115,7 @@ class Sudoku(BoxLayout):
                            font_name = "label_font.ttf",
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
-                           size_hint = (0.5, 0.1))
+                           size_hint = (0.5, 0.8))
         self.quitbtn.bind(on_press = self.quitback)
         
         self.clearbtn = Button(text = "Clear",
@@ -123,7 +123,7 @@ class Sudoku(BoxLayout):
                            font_name = "label_font.ttf",
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
-                           size_hint = (0.5, 0.1))
+                           size_hint = (0.5, 0.8))
         self.clearbtn.bind(on_press = self.clearback)
         
         
