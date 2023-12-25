@@ -110,16 +110,16 @@ class Sudoku(BoxLayout):
         
         self.layout = BoxLayout(orientation="horizontal", size_hint=(1, 0.2), pos_hint = {'x':0, 'y':0})
         
-        self.quitbtn = Button(text = "Quit",
-                           font_size = self.height * 0.5,
+        self.quitbtn = Button(text = "quit",
+                           font_size = self.height * 0.8,
                            font_name = "label_font.ttf",
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
                            size_hint = (0.5, 0.8))
         self.quitbtn.bind(on_press = self.quitback)
         
-        self.clearbtn = Button(text = "Clear",
-                           font_size = self.height * 0.5,
+        self.clearbtn = Button(text = "clear",
+                           font_size = self.height * 0.8,
                            font_name = "label_font.ttf",
                            color = (0, 0.25, 0.3, 1),
                            bold = True,
