@@ -242,24 +242,6 @@ class Sudoku(BoxLayout):
                     self.grid.grids[grid].buttons[button].background_color = (0.15, 0.15, 0.15, 1)           
 
 
-    def solve_board(self, board):
-        for i in range(81):
-            row = int(i/9)
-            col = i%9
-            
-            if board[row][col] == "":    
-                for value in range(1, 10):
-                    if self.value_check(row, col, value, board):
-                        board[row][col] = value
-                        if self.is_full(board):
-                            return board
-                        else:
-                            if self.solve_board(board):
-                                return board
-                break
-        board[row][col] = ""
-            
-
     def is_full(self, board):
         for row in range(9):
             for col in range(9):
