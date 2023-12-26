@@ -312,7 +312,10 @@ class Sudoku(BoxLayout):
         return True
 
 
-    def check_smallgrid(self, prm):
+    def check_smallgrid(self, prm, board):
+        print("66", board[6][6])
+        print("77", board[7][7])
+        print("88", board[8][8])
         return True
 
         
@@ -324,7 +327,7 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
-        if self.check_smallgrid(1):
+        if self.check_smallgrid(1, self.player_board):
             print("Hallo")
             
         self.menu3 = MenuWidget3()
