@@ -310,7 +310,11 @@ class Sudoku(BoxLayout):
             if self.player_board[row][col] == "":
                 return False
         return True
-        
+
+
+    def check_smallgrid(self, prm):
+        return True
+
         
     def game_over(self):
         self.over = True
@@ -320,6 +324,9 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
+        if self.check_smallgrid(1):
+            print("Hallo")
+            
         self.menu3 = MenuWidget3()
         
         self.add_widget(self.menu3)
