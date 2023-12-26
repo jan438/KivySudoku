@@ -25,6 +25,10 @@ class MenuWidget(RelativeLayout):
     pass   
 
 
+class MenuWidget2(RelativeLayout):
+    pass   
+
+
 class MenuWidget3(RelativeLayout):
     pass   
 
