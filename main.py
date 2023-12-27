@@ -318,7 +318,8 @@ class Sudoku(BoxLayout):
         for i in range(9):
             row = int(i/3)
             col = i%3
-            print("RC", board[R+row][C+col])
+            val = board[R+row][C+col]
+            print("RC", val)
         ###print("66", board[6][6])
         ###print("77", board[7][7])
         ###print("88", board[8][8])
