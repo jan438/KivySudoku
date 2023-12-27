@@ -313,24 +313,15 @@ class Sudoku(BoxLayout):
 
 
     def check_smallgrid(self, prm, board):
-    ### 0  000102 091011 181920
-    ### 1  030405 121314 212223
-    ### 2  060708 151617 242526
-    ### 3  272829 363738 454647
-    ### 4  303132 394041 484950
-    ### 5  333435 424344 515253
-    ### 6  545556 636465 727374
-    ### 7  575859 666768 757677
-    ### 8  606162 697071 787980
         R = int(prm/3) * 3
-        C = prm % 3 * 3
+        C = prm%3 * 3
         for i in range(9):
             row = int(i/3)
             col = i%3
             print("RC", board[R+row][C+col])
-        print("66", board[6][6])
-        print("77", board[7][7])
-        print("88", board[8][8])
+        ###print("66", board[6][6])
+        ###print("77", board[7][7])
+        ###print("88", board[8][8])
         return True
 
         
