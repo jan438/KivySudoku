@@ -319,7 +319,8 @@ class Sudoku(BoxLayout):
             row = int(i/3)
             col = i%3
             val = board[R+row][C+col]
-            print("RC", val)
+            j = int(val)
+            print("RC:",R+row,C+col,"Value:",val,j)
         ###print("66", board[6][6])
         ###print("77", board[7][7])
         ###print("88", board[8][8])
@@ -334,24 +335,6 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
  
-        if self.check_smallgrid(0, self.player_board):
-            print("Hallo0")
-        if self.check_smallgrid(1, self.player_board):
-            print("Hallo1")
-        if self.check_smallgrid(2, self.player_board):
-            print("Hallo2")
-        if self.check_smallgrid(3, self.player_board):
-            print("Hallo3")
-        if self.check_smallgrid(4, self.player_board):
-            print("Hallo4")
-        if self.check_smallgrid(5, self.player_board):
-            print("Hallo5")
-        if self.check_smallgrid(6, self.player_board):
-            print("Hallo6")
-        if self.check_smallgrid(7, self.player_board):
-            print("Hallo7")
-        if self.check_smallgrid(8, self.player_board):
-            print("Hallo8")
         if self.check_smallgrid(8, self.player_board):
             print("Hallo8")
             
