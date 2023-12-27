@@ -341,9 +341,27 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.layout)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
-        
+ 
+        if self.check_smallgrid(0, self.player_board):
+            print("Hallo0")
+        if self.check_smallgrid(1, self.player_board):
+            print("Hallo1")
+        if self.check_smallgrid(2, self.player_board):
+            print("Hallo2")
+        if self.check_smallgrid(3, self.player_board):
+            print("Hallo3")
+        if self.check_smallgrid(4, self.player_board):
+            print("Hallo4")
+        if self.check_smallgrid(5, self.player_board):
+            print("Hallo5")
+        if self.check_smallgrid(6, self.player_board):
+            print("Hallo6")
+        if self.check_smallgrid(7, self.player_board):
+            print("Hallo7")
         if self.check_smallgrid(8, self.player_board):
-            print("Hallo")
+            print("Hallo8")
+        if self.check_smallgrid(8, self.player_board):
+            print("Hallo8")
             
         self.menu3 = MenuWidget3()
         
