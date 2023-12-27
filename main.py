@@ -321,7 +321,7 @@ class Sudoku(BoxLayout):
             col = i%3
             val = board[R+row][C+col]
             j = int(val) - 1
-##            counts[j]+=1
+            counts[j]+=1
             print("RC:",R+row,C+col,"Value:",val,j)
         ###print("66", board[6][6])
         ###print("77", board[7][7])
