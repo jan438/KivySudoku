@@ -313,13 +313,15 @@ class Sudoku(BoxLayout):
 
 
     def check_smallgrid(self, prm, board):
+        counts = [0,0,0,0,0,0,0,0,0]
         R = int(prm/3) * 3
         C = prm%3 * 3
         for i in range(9):
             row = int(i/3)
             col = i%3
             val = board[R+row][C+col]
-            j = int(val)
+            j = int(val) - 1
+##            counts[j]+=1
             print("RC:",R+row,C+col,"Value:",val,j)
         ###print("66", board[6][6])
         ###print("77", board[7][7])
