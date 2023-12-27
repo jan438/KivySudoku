@@ -322,6 +322,12 @@ class Sudoku(BoxLayout):
     ### 6  545556 636465 727374
     ### 7  575859 666768 757677
     ### 8  606162 697071 787980
+        R = int(prm/3) * 3
+        C = prm % 3 * 3
+        for i in range(9):
+            row = int(i/3)
+            col = i%3
+            print("RC", board[R+row][C+col])
         print("66", board[6][6])
         print("77", board[7][7])
         print("88", board[8][8])
@@ -336,7 +342,7 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
         
-        if self.check_smallgrid(1, self.player_board):
+        if self.check_smallgrid(8, self.player_board):
             print("Hallo")
             
         self.menu3 = MenuWidget3()
