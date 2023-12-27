@@ -324,10 +324,6 @@ class Sudoku(BoxLayout):
             counts[j]+=1
             if counts[j] == 2:
                 return False
-            print("RC:",R+row,C+col,"Value:",val,j)
-        ###print("66", board[6][6])
-        ###print("77", board[7][7])
-        ###print("88", board[8][8])
         return True
 
         
