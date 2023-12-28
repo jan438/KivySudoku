@@ -336,18 +336,23 @@ class Sudoku(BoxLayout):
         self.remove_widget(self.number)
  
         if self.check_smallgrid(8, self.player_board):
-            print("Hallo8")
-            
-        self.menu3 = MenuWidget3()
-        
-        self.add_widget(self.menu3)
+            self.menu3 = MenuWidget3()
+            self.add_widget(self.menu3)
+        else:
+            self.menu2 = MenuWidget2()
+            self.add_widget(self.menu2)
         
     
     def new_game(self):
-        self.remove_widget(self.menu3)        
+        self.remove_widget(self.menu3)
         self.add_widget(Sudoku())
         
         
+    def new_game_incorrect(self):
+        self.remove_widget(self.menu2)        
+        self.add_widget(Sudoku())
+        
+                
     def update_time(self):
         if self.seconds_passed > 60:
             self.seconds_passed -= 60
