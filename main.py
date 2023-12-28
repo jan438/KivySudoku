@@ -329,13 +329,21 @@ class Sudoku(BoxLayout):
         
     def game_over(self):
         self.over = True
+        self.correct = True
         
         self.remove_widget(self.grid)
         self.remove_widget(self.layout)
         self.remove_widget(self.timer)
         self.remove_widget(self.number)
- 
-        if self.check_smallgrid(8, self.player_board):
+        
+        for i in range(9): 
+            if self.check_smallgrid(i, self.player_board):
+                self.correct = True
+            else:
+                self.correct = False
+                break
+                     
+        if self.correct:
             self.menu3 = MenuWidget3()
             self.add_widget(self.menu3)
         else:
