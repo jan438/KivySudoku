@@ -327,6 +327,28 @@ class Sudoku(BoxLayout):
         return True
 
         
+    def check_row(self, prm, board):
+        counts = [0,0,0,0,0,0,0,0,0]
+        for j in range(9):
+            val = board[prm][j]
+            k= int(val) - 1
+            counts[k]+=1
+            if counts[k] == 2:
+                return False
+        return True
+        
+        
+    def check_col(self, prm, board):
+        counts = [0,0,0,0,0,0,0,0,0]
+        for j in range(9):
+            val = board[j][prm]
+            k= int(val) - 1
+            counts[k]+=1
+            if counts[k] == 2:
+                return False
+        return True
+
+        
     def game_over(self):
         self.over = True
         self.correct = True
@@ -342,7 +364,22 @@ class Sudoku(BoxLayout):
             else:
                 self.correct = False
                 break
-                     
+                
+        for i in range(9):
+            if self.check_row(i, self.player_board):
+                self.correct = True
+            else:
+                self.correct = False
+                break 
+
+        for i in range(9):
+            if self.check_col(i, self.player_board):
+                self.correct = True
+
+            else:
+                self.correct = False
+                break
+                            
         if self.correct:
             self.menu3 = MenuWidget3()
             self.add_widget(self.menu3)
