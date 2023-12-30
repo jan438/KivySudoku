@@ -216,7 +216,10 @@ class Sudoku(BoxLayout):
             row = int(i/9)
             col = i%9  
             self.player_board[row][col] = ""
-        
+                        
+        if self.player_board[8][8] == 0:
+            self.player_board[8][8] = ""
+    
         self.print_board(self.player_board)
         
             
