@@ -375,7 +375,6 @@ class Sudoku(BoxLayout):
         for i in range(9):
             if self.check_col(i, self.player_board):
                 self.correct = True
-
             else:
                 self.correct = False
                 break
