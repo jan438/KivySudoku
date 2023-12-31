@@ -199,9 +199,11 @@ class Sudoku(BoxLayout):
                 for value in self.useable_values:
                     if self.value_check(row, col, value, self.original_board):
                         self.original_board[row][col] = value
+                        print("row col:",row,col,value)
                         if self.is_full(self.original_board):
                             return True
                         else:
+                            print("Recursieve aanroep")
                             if self.original_board_init():
                                 return True
                 break
