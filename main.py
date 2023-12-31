@@ -193,17 +193,16 @@ class Sudoku(BoxLayout):
         for i in range(81):
             row = int(i/9)
             col = i%9
-            
             if self.original_board[row][col] == 0:
                 random.shuffle(self.useable_values)      
                 for value in self.useable_values:
                     if self.value_check(row, col, value, self.original_board):
                         self.original_board[row][col] = value
-                        print("row col:",row,col,value)
+#                        print("row col:",row,col,value)
                         if self.is_full(self.original_board):
                             return True
                         else:
-                            print("Recursieve aanroep")
+#                           print("Recursieve aanroep")
                             if self.original_board_init():
                                 return True
                 break
